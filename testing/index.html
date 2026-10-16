@@ -1,0 +1,177 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Plain Components showcase</title>
+    <meta
+      name="description"
+      content="Plain Components showcase"
+    >
+    <script src="https://unpkg.com/@ungap/custom-elements"></script>
+    <script type="module">
+      import '~/index.ts';
+    </script>
+    <style>
+      .component-wrapper {
+        display: flex;
+        flex-direction: row;
+        gap: 8px;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <h1>Plain Components showcase</h1>
+      <section>
+        <h2>Anchors</h2>
+        <div class="component-wrapper">
+          <a
+            is="plain-anchor"
+            href="/"
+          >
+            <span>Anchor</span>
+          </a>
+          <a
+            is="plain-anchor"
+            href="/"
+            disabled
+          >
+            <span>Disabled anchor</span>
+          </a>
+          <a
+            is="plain-anchor"
+            href="/"
+            soft-disabled
+          >
+            <span>Soft-disabled anchor</span>
+          </a>
+        </div>
+      </section>
+      <section>
+        <h2>Blocks</h2>
+        <div class="component-wrapper">
+          <div is="plain-block">Block</div>
+        </div>
+      </section>
+      <section>
+        <h2>Buttons</h2>
+        <div class="component-wrapper">
+          <button
+            is="plain-button"
+            type="button"
+            name="button"
+            onclick="alert('Hello, world!')"
+          >
+            <span>Button</span>
+          </button>
+          <button
+            is="plain-button"
+            type="button"
+            name="disabled-button"
+            onclick="alert('Hello, world!')"
+            disabled
+          >
+            <span>Disabled button</span>
+          </button>
+          <button
+            is="plain-button"
+            type="button"
+            name="soft-disabled-button"
+            onclick="alert('Hello, world!')"
+            soft-disabled
+          >
+            <span>Soft-disabled button</span>
+          </button>
+        </div>
+      </section>
+      <section>
+        <h2>Checkboxes</h2>
+        <div class="component-wrapper">
+          <input
+            is="plain-checkbox"
+            type="checkbox"
+            name="checkbox"
+            aria-label="Checkbox"
+          >
+          <input
+            is="plain-checkbox"
+            type="checkbox"
+            name="disabled-checkbox"
+            disabled
+            aria-label="Disabled checkbox"
+          >
+          <input
+            is="plain-checkbox"
+            type="checkbox"
+            name="soft-disabled-checkbox"
+            soft-disabled
+            aria-label="Soft-disabled checkbox"
+          >
+        </div>
+      </section>
+      <section>
+        <h2>Images</h2>
+        <div class="component-wrapper">
+          <img
+            is="plain-image"
+            src="https://thumb.wikimedia.org/wikipedia/commons/thumb/4/47/PNG_transparency_demonstration_1.png/330px-PNG_transparency_demonstration_1.png"
+            alt="Four differently colored dice"
+          >
+        </div>
+      </section>
+      <section>
+        <h2>Inlines</h2>
+        <div class="component-wrapper">
+          <span is="plain-inline">Inline</span>
+        </div>
+      </section>
+      <section>
+        <h2>Text fields</h2>
+        <div class="component-wrapper">
+          <input
+            is="plain-text-field"
+            type="text"
+            name="text-field"
+            aria-label="Text field"
+          >
+          <input
+            is="plain-text-field"
+            type="text"
+            name="disabled-text-field"
+            disabled
+            aria-label="Disabled text field"
+          >
+          <input
+            is="plain-text-field"
+            type="text"
+            name="soft-disabled-text-field"
+            soft-disabled
+            aria-label="Soft-disabled text field"
+          >
+        </div>
+      </section>
+      <section>
+        <h2>Textareas</h2>
+        <div class="component-wrapper">
+          <textarea
+            is="plain-textarea"
+            name="textarea"
+            aria-label="Textarea"
+          ></textarea>
+          <textarea
+            is="plain-textarea"
+            name="disabled-textarea"
+            disabled
+            aria-label="Disabled textarea"
+          ></textarea>
+          <textarea
+            is="plain-textarea"
+            name="soft-disabled-textarea"
+            soft-disabled
+            aria-label="Soft-disabled textarea"
+          ></textarea>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
